@@ -25,8 +25,9 @@ let phrases = [
   phrase.textContent = randomElement.text;
   image.src = randomElement.image;
 
-  button.addEventListener('click', {
-      handleEvent() {            
+   button.addEventListener('click', {
+      handleEvent() {
+        button.innerHTML = "ещё вариант...";            
           let randomElement = getRandomElement(phrases);
           smoothly(phrase, 'textContent', randomElement.text);
           smoothly(image, 'src', randomElement.image);
@@ -41,13 +42,15 @@ let phrases = [
       }
     });
 
-
-  for (let i = 0; i <= 2; i = i + 1) { 
-      phrase.textContent = randomElement.text;
-      image.src = randomElement.image;
-    // smoothly(phrase, 'textContent', phrases[i].text);
-    // smoothly(image, 'src', phrases[i].image);
+    for (let i = 0; i <= 2; i = i + 1) { 
+      // phrase.textContent = randomElement.text;
+      // image.src = randomElement.image;
+    smoothly(phrase, 'textContent', phrases[i].text);
+    smoothly(image, 'src', phrases[i].image);
   };
+
+
+ 
 
   // button.onclick = function() {
   //     alert('Клик!');
