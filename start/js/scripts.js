@@ -28,10 +28,10 @@ let phrases = [
   button.addEventListener('click', {
       handleEvent() {            
           let randomElement = getRandomElement(phrases);
-          // smoothly(phrase, 'textContent', phrases.text);
-          // smoothly(image, 'src', phrases.image);
-          phrase.textContent = randomElement.text;
-          image.src = randomElement.image;
+          smoothly(phrase, 'textContent', randomElement.text);
+          smoothly(image, 'src', randomElement.image);
+          // phrase.textContent = randomElement.text;
+          // image.src = randomElement.image;
 
           if (randomElement.text.length > 40) {
                   advice.style.fontSize = '33px';
@@ -42,10 +42,12 @@ let phrases = [
     });
 
 
-  // for (let i = 0; i <= 2; i = i + 1) { 
-  //   smoothly(phrase, 'textContent', phrases[i].text);
-  //   smoothly(image, 'src', phrases[i].image);
-  // };
+  for (let i = 0; i <= 2; i = i + 1) { 
+      phrase.textContent = randomElement.text;
+      image.src = randomElement.image;
+    // smoothly(phrase, 'textContent', phrases[i].text);
+    // smoothly(image, 'src', phrases[i].image);
+  };
 
   // button.onclick = function() {
   //     alert('Клик!');
