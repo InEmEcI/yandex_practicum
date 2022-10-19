@@ -26,6 +26,16 @@ let phrases = [
   phrase.textContent = randomElement.text;
   image.src = randomElement.image;
 
+// функция создаёт рандомный цвет
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
    button.addEventListener('click', {
       handleEvent() {
         button.innerHTML = "ещё вариант...";            
@@ -43,9 +53,13 @@ let phrases = [
       }
     });
 
+let phraseСolor = getRandomColor();
+let backgroundСolor = getRandomColor();
+    
     changeСolor.addEventListener('click', {
       handleEvent() {
-        phrase.style.color = 'red';
+        phrase.style.color = phraseСolor;
+        phrase.style.background = backgroundСolor;
       }
     });
 
