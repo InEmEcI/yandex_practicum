@@ -41,7 +41,7 @@
     margin: 0;
   }
   
-  .button {
+  .button, #changeСolor {
     width: 130px;
     height: 40px;
     padding-top: 10px;
@@ -54,6 +54,10 @@
   }
   
   .button:hover {
+    opacity: 0.5;
+  }
+
+  #changeСolor:hover {
     opacity: 0.5;
   }
   

@@ -19,7 +19,8 @@ let phrases = [
   let button = document.querySelector('.button');
   let phrase = document.querySelector('.phrase');
   let advice = document.querySelector('.advice');
-  let image = document.querySelector('.image');
+  let image = document.querySelector('.image');  
+  let changeСolor = document.getElementById('changeСolor');
   
   let randomElement = getRandomElement(phrases);
   phrase.textContent = randomElement.text;
@@ -41,6 +42,18 @@ let phrases = [
                 }
       }
     });
+
+    changeСolor.addEventListener('click', {
+      handleEvent() {
+        phrase.style.color = 'red';
+      }
+    });
+
+
+    // 
+    // document.getElementById('changeСolor').style.color = 'red';
+
+
 
     for (let i = 0; i <= 2; i = i + 1) { 
       // phrase.textContent = randomElement.text;
