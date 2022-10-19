@@ -53,6 +53,7 @@ function getRandomColor() {
       }
     });
 
+function doFunction(){
 let phraseСolor = getRandomColor();
 let backgroundСolor = getRandomColor();
     
@@ -62,6 +63,7 @@ let backgroundСolor = getRandomColor();
         phrase.style.background = backgroundСolor;
       }
     });
+  };
 
 
     // 
