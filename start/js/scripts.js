@@ -39,9 +39,9 @@ function getRandomColor() {
 
 // функция меняет цвет фона и цвет фразы
 function doFunction(c,b){
-  var phraseСolor = c;
-  var backgroundСolor = b;
-      
+  let phraseСolor = c;
+  let backgroundСolor = b;
+      //
       changeСolor.addEventListener('click', {
         handleEvent() {
           phrase.style.color = phraseСolor;
@@ -50,16 +50,36 @@ function doFunction(c,b){
       });
     };
 
-  button.onclick = doFunction(getRandomColor(),getRandomColor());
+// // функция меняет цвет фона и цвет фразы
+// function doFunction(c,b){
+//   var phraseСolor = c;
+//   var backgroundСolor = b;
+//       //
+//       changeСolor.addEventListener('click', {
+//         handleEvent() {
+//           phrase.style.color = phraseСolor;
+//           phrase.style.background = backgroundСolor;
+//         }
+//       });
+//     };
+
+  // button.onclick = doFunction(getRandomColor(),getRandomColor());
     
 
    button.addEventListener('click', {
       handleEvent() {        
+        
         button.innerHTML = "ещё вариант...";
-           
+        
+        // button.onclick = function() {          
+        //   doFunction(getRandomColor(),getRandomColor());
+        // };
+
         // button.onclick = function() {
         //   alert('Спасибо');
         // };
+
+        
 
           let randomElement = getRandomElement(phrases);
           // doFunction(getRandomColor(),getRandomColor());
